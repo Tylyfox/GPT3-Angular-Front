@@ -11,6 +11,8 @@ import { BrandComponent } from './components/brand/brand.component';
 import { FeatureComponent } from './components/feature/feature.component';
 import { Whatgpt3Component } from './components/whatgpt3/whatgpt3.component';
 import { FeaturesComponent } from './components/features/features.component';
+import { PossibilityComponent } from './components/possibility/possibility.component';
+import { CTAComponent } from './components/cta/cta.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FeaturesComponent } from './components/features/features.component';
     FeatureComponent,
     Whatgpt3Component,
     FeaturesComponent,
+    PossibilityComponent,
+    CTAComponent,
   ],
   imports: [
     BrowserModule,
