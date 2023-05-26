@@ -1,0 +1,64 @@
+<ng-template #menu>
+  <p><a href="#home">Home</a></p>
+  <p><a href="#wpt3">What is GPT3?</a></p>
+  <p><a href="#possibility">Open AI</a></p>
+  <p><a href="#features">Case Studies</a></p>
+  <p><a href="#blog">Library</a></p>
+</ng-template>
+
+<div class="gpt-3__navbar">
+  <div class="gpt3__navbar-links">
+    <div class="gpt3__navbar-links_logo">
+      <img [src]='logo' alt="logo"/>
+    </div>
+    <div class="gpt3__navbar-links_container">
+      <ng-container *ngTemplateOutlet="menu"></ng-container>
+    </div>
+  </div>
+  <div class="gpt3__navbar-sign">
+    <p>Sign in</p>
+    <button type="button">Sign up</button>
+  </div>
+  <div className="gpt3__navbar-menu">
+<!--    {toggleMenu ?-->
+<!--                    <RiCloseLine color="#fff" size={27} onClick={()=> setToggleMenu(false)}/>-->
+<!--                    : <RiMenu3Line color="#fff" size={27} onClick={()=> setToggleMenu(true)}/>-->
+<!--    }-->
+<!--    {toggleMenu && (-->
+<!--                    <div className="gpt3__navbar-menu_container scale-up-center">-->
+<!--                        <div className="gpt3__navbar-menu_container-links">-->
+<!--                            <ng-container *ngTemplateOutlet="menu"></ng-container>-->
+<!--                            <div className="gpt3__navbar_container-links-sign">-->
+<!--                                <p>Sign in</p>-->
+<!--                                <button type="button">Sign up</button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                )}-->
+    <!-- Affichage de l'icône de fermeture lorsque le menu est ouvert -->
+    <ng-container *ngIf="toggleMenu; else menuClosed">
+      <mat-icon class="gpt3__navbar-icone" (click)="setToggleMenu(false)">close</mat-icon>
+    </ng-container>
+
+    <!-- Affichage de l'icône du menu lorsque le menu est fermé -->
+    <ng-template #menuClosed>
+      <mat-icon class="gpt3__navbar-icone" (click)="setToggleMenu(true)">menu</mat-icon>
+    </ng-template>
+
+    <!-- Affichage du contenu du menu lorsque le menu est ouvert -->
+    <ng-container *ngIf="toggleMenu">
+      <div class="gpt3__navbar-menu_container scale-up-center">
+        <div class="gpt3__navbar-menu_container-links">
+          <ng-container *ngTemplateOutlet="menu"></ng-container>
+          <div class="gpt3__navbar_container-links-sign">
+            <p>Sign in</p>
+            <button type="button">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+
+  </div>
+</div>
+
