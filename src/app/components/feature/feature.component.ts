@@ -6,11 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./feature.component.css']
 })
 export class FeatureComponent {
-@Input() title : string;
-@Input() text : string;
-
-constructor() {
-  this.title = "";
-  this.text = "";
-}
+@Input() title!: string;
+@Input() text!: string;
 }

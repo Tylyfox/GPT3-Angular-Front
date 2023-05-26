@@ -13,6 +13,9 @@ import { Whatgpt3Component } from './components/whatgpt3/whatgpt3.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { PossibilityComponent } from './components/possibility/possibility.component';
 import { CTAComponent } from './components/cta/cta.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ArticleComponent } from './components/article/article.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { CTAComponent } from './components/cta/cta.component';
     FeaturesComponent,
     PossibilityComponent,
     CTAComponent,
+    BlogComponent,
+    FooterComponent,
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,
