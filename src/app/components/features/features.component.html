@@ -1,0 +1,11 @@
+<div class="gpt3__features section__padding" id="features">
+  <div class="gpt3__features-heading">
+    <h1 class="gradient__text">The Future is Now and You Just Need To Realize It. Step into Future Today & Make it Happen.</h1>
+    <p>Request Early Access to Get Started</p>
+  </div>
+  <div class="gpt3__features-container">
+    <ng-container *ngFor="let feature of features">
+      <app-feature [title]="feature.title" [text]="feature.text"></app-feature>
+    </ng-container>
+  </div>
+</div>

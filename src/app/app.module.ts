@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { BrandComponent } from './components/brand/brand.component';
+import { FeatureComponent } from './components/feature/feature.component';
+import { Whatgpt3Component } from './components/whatgpt3/whatgpt3.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { BrandComponent } from './components/brand/brand.component';
     NavbarComponent,
     HeaderComponent,
     BrandComponent,
+    FeatureComponent,
+    Whatgpt3Component,
+    FeaturesComponent,
   ],
   imports: [
     BrowserModule,
